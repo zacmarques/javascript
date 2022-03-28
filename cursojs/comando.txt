@@ -1,0 +1,7 @@
+Aqui serão enumerados os comandos de JS, conforme for aprendendo
+
+	1- window.alert: cria um alerta para o cliente
+	2- window.confirm: pede uma confirmação em alerta para o cliente
+	3- window.prompt: pergunta alguma coisa e abre um input para o usuário
+	4- Number() : converte para number oq tiver entre()
+	5- String() : converte para string oq tiver entre()

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            background-image: linear-gradient(80deg, lightgreen, lightblue, lightyellow);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            font-weight: bold;
+            font-size: 3vw;
+            color: green;
+        } 
+        p{
+            font-size: 2vw;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aplicando JavaScript</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+    <script>
+        /* O sinal de =, em js, significa RECEBER. Ou seja, x=y é x recebe y*/
+        /* Tipos PRIMITIVOS js: Number, String, Boolean, Null, Undefined, Object e Function -> typeof me diz qual é o tipo de alguma variável. */
+        window.alert('Minha primeira mensagem'); //alerta algo para o usuário
+        var gostando = window.confirm('Está gostando de JS?'); //pede para o usuário confirmar algo
+        var nome = window.prompt('Qual seu nome?'); //vai interagir com o usuário e perguntar algo
+        window.alert('É um grande prazer te conhecer, ' + nome + '!'); //alerta algo para o usuário -> "+" serve para ligar uma coisa com outra e na programação é chamado de Concatenação.
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            background-image: linear-gradient(80deg, lightgreen, lightblue, lightyellow);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 3vw;
+            color: black;
+        }
+        h1{
+            font-weight: bold;
+            font-size: 3vw;
+            color: green;
+        } 
+        p{
+            font-size: 2vw;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Esse é o exercício 02 de JavaScript!</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+    <script>
+        var nome = window.prompt('Qual seu nome?');
+        document.write(`Olá, ${nome}. Seu nome tem ${nome.length} letras!`);
+        /*> n1.toFixed(2) -> faz eu fixar 2 casas decimais no final. 
+            n1.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'}) -> me permite transformar em "lingua" local, pt-br, e em estilo de dinheiro, brl de acordo com a opção. */
+    </script>
+    <script>
+        var n1 = Number(window.prompt('Digite um número:'));
+        var n2 = Number(window.prompt('Digite outro número'));
+        var s = n1 + n2;
+        window.alert(`A soma entre ${n1} e ${n2} é: ${s}!`);
+        //A craze anuncia que é uma template string, isso permite o uso do placeholder "${}" e deixa mais "limpo" a linha de código.
+        //Number + Number o java interpreta como adição
+        //String + String o java interpreta como concatenação
+    </script>
+</body>
+</html>
