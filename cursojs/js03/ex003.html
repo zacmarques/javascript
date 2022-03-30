@@ -28,11 +28,79 @@
 <body>
     <script>
     /*Operadores: 
-        Aritméticos
-        Atribuição
-        Relacionais
-        Lógicos
-        Ternário*/
+        1. Aritméticos -> +(adição), -(subtração), *(multiplicação), /(divisão), %(resto da divisão inteira), **(potência -> ao quadrado, ao cubo e etc.);
+            1.1. Precedência -> Ordem da precedência dos operadores aritméticos. 
+            {   1º: (); 
+                2º: **; 
+                3º: *, / e %;
+                4º: + e -;
+            }
+        2. Atribuição -> atribuição de valores à variável.
+            2.1. Auto-Atribuição -> a variável que se auto-atribui
+                var n = 3
+                n = n + 4 -> 7
+                n = n - 5 -> 2
+                n = n * 4 -> 8
+                n = n**2 -> 64
+                n = n % 5 -> 4
+            2.2. Simplificando -> simplificação da auto atribuição
+                var n = 3
+                n += 4
+                n -= 5
+                n *= 4
+                n **= 2
+                n %= 5
+            2.3 Incremento -> pré e pós incremento
+                var n = 10
+                n++
+                n--
+
+        3. Relacionais -> são operadores relacionais >(maior), <(menor), >=(maior igual), <=(menor igual), ==(igual, dois "=" pois um só é RECEBE nunca esquecer), !=(não igual/diferente), ===(igual restrito); 
+        NÃO TEM ORDEM DE PRECEDÊNCIA.
+            3.1 Exemplo Relacionais
+                5>2 -> true -> cinco maior que dois? true
+                7<4 -> false -> 7 menor que 4? false
+                8>=8 -> true -> 8 é maior ou igual a 8? true
+                9<=7 -> false -> 9 é menor ou igual a 7? false
+                5==5 -> true -> 5 é igual a 5? true
+                4!=4 -> false -> 4 é diferente de 4? false
+            3.2 Identidade(===)/igualdade restrita -> testa se os elementos são do mesmo tipo.
+                5==='5' -> false -> um é number e o outro é string
+                5===5 -> true -> um é number e o outro também, logo são identicos.
+                
+        4. Lógicos -> são operadores lógicos: !(negação/não), &&(conjunção), ||(disjunção)
+            4.1 Exemplo Lógicos(ordem de precedência: 1º !, 2º && e 3º ||)
+                !true ou !false e a resposta é sempre o oposto.
+                    {! -> true ou false -> !true == false(se lê não verdadeiro então é false) -> !false == true(se lê não falso então é verdadeiro)}
+                && -> Conjunção seria condição de que eu preciso de ter duas coisas, a condição só se completa no true true.
+                    {
+                        true&&true -> true
+                        true&&false -> false
+                        false&&true-> false
+                        false&&false -> false
+                    }    
+                || -> Disjunção, condição que basta um ser true e o resultado será true. Seria a condição onde eu quero que pelo menos um seja verdadeiro, caso contrário será falso.
+                {
+                    true||true -> true
+                    true||false -> true
+                    false||true -> true
+                    false||false-> false
+                }
+        5. Ternário -> Se chama ternário pois junta três operandos. Possui dois simbolos que aparecem numa mesma expressão.
+                Exemplo: 
+                teste?true:false
+                média = 5
+                média > 7?Aprovado:Reprovado
+                
+        PRECEDÊNCIA GERAL:
+        1. Aritméticos,   ]
+        2. Relacionais,
+        3. Lógicos.      
+        */
+        n1 = Number(window.prompt('Qual foi sua primeira nota?'));
+        n2 = Number(window.prompt('Qual foi sua segunda nota?'));
+        n3 = Number(window.prompt('Qual foi sua terceira nota?'));
+        media = (n1 + n2 + n3) / 2 >= 7?(alert ('Aprovado, parabéns!')):(alert('Reprovado, estude para a recuperação!')); 
     </script>
 </body>
 </html>
