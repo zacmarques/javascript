@@ -23,11 +23,121 @@
             font-size: 2vw;
             color: white;
         }
+        div.box{
+            background-color: lightseagreen;
+            width: 20%;
+            border: 2px solid black;
+            border-radius: 5px
+        }
+        div#area{
+            font: normal 10px Arial;
+            background-color: green;
+            color: white;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            border: 2px solid black;
+            border-radius: 3px;
+
+        }
+        #resultado{
+            width: 400px;
+            height: 200px;
+            color: white;
+            background-color: lightsteelblue;
+            border: 2px solid black;
+            border-radius: 3px;
+            font: normal 30px Arial;
+        }
     </style>
 </head>
 <body>
+    <h1>Primeiros passos no Dom.</h1>
+    <p>Daquele jeito.</p>
+    <div id="box">Clique em Mim</div>
     <script>
-
+        /*A árvore Dom
+        Seria na ordem, mais ou menos:
+        Window
+            location, document, history
+                html
+                    head, body
+                        head: meta, title / body: h1, p, div, bla bla bla
+        Selecionando:
+        É possível selecionar cada aba através de selecionadores específicos, são eles:
+            1 - Marca(por tag)
+                1.1 - getElementsByTagName()
+            2 - ID
+                2.1 - getElementsById()
+            3 - Nome
+                3.1 - getElementsByName()
+            4 - Classe
+                4.1 - getElementsByClassName()
+            5 - Seletor(indicada na documentação)
+                5.1 - querySelector(), querySelectorAll()
+    */
+        var corpo = window.document.body
+        corpo.style.background = 'lightgreen'
+        var p1 = document.getElementsByTagName('p')[0] // O primeiro P é 0, o segundo é 1 e assim vai indo.
+        window.document.write('está dizendo: ' + p1.innerText)
+        var caixa = document.getElementById('box');
+        caixa.style.background = 'blue'
+    </script>
+    <div id="area">Doideira</div>
+    <script>
+        /*
+        Função / Funcionalidade:
+            Conjunto de códigos ou linhas que serão executadas somente quando o evento ocorrer.
+            Para delimitar o evento, é preciso colocá-lo dentro de um bloco e o bloco é delimitado assim:
+            function NomedaAção(parâmetros){Tudo dentro do parenteses é o bloco}
+        Listener:
+            "Ouvidores", ou seja, elemento que presta atenção em algo e faz algo quando algo acontecer. É quem dá o gatilho dos eventos. 
+        */
+       a = window.document.getElementById('area');
+       a.addEventListener('mouseenter', entrar)
+       a.addEventListener('click', clicar)
+       a.addEventListener('mouseout', sair)
+       a.addEventListener('mousedown', baixo)
+       a.addEventListener('mouseup', cima)
+       a.addEventListener('mousemove', mover)
+       
+       function clicar(){
+        a.innerText = 'Clicou';
+        a.style.background = 'lightblue'
+       }
+       function entrar(){
+        a.innerText= 'Entrou';
+       }
+       function sair(){
+        a.innerText= 'Saiu';
+        a.style.background = 'Green'
+       }
+       function baixo(){
+        a.innerText= 'Desceu!';
+       }
+       function cima(){
+        a.innerText= 'Subiu!';
+       }
+       function mover(){
+        a.innerText= 'Se mexe queridinha!';
+       }
+    </script>
+    <h1>Show me my data!</h1>
+    <input type="text" name="login" id="login">
+    <input type="password" name="senha" id="senha">
+    <input type="button" value="Seus dados!" id="botao" onclick="entrar()">
+    <div id="resultado">Resultado da Pesquisa:</div>
+    <script>
+        function entrar(){
+            login = document.getElementById('login')
+            senha = document.getElementById('senha')
+            res = document.getElementById('resultado')
+            flogin = String(login.value)
+            nsenha = Number(senha.value)
+            botao = login == nsenha
+            res.innerHTML = `Seus dados de login são: <br> seu login -> ${flogin} <br> e <br> sua senha -> ${nsenha}` 
+        }
     </script>
 </body>
 </html>
