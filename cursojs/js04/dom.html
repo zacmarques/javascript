@@ -124,8 +124,8 @@
        }
     </script>
     <h1>Show me my data!</h1>
-    <input type="text" name="login" id="login">
-    <input type="password" name="senha" id="senha">
+    <label for="login">Nome</label> <input type="text" id="login">
+    <label for="senha">Senha</label> <input type="password" id="senha">
     <input type="button" value="Seus dados!" id="botao" onclick="entrar()">
     <div id="resultado">Resultado da Pesquisa:</div>
     <script>
@@ -134,7 +134,7 @@
             senha = document.getElementById('senha')
             res = document.getElementById('resultado')
             flogin = String(login.value)
-            nsenha = Number(senha.value)
+            nsenha = (senha.value)
             botao = login == nsenha
             res.innerHTML = `Seus dados de login são: <br> seu login -> ${flogin} <br> e <br> sua senha -> ${nsenha}` 
         }

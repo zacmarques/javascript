@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição!</title>
+    <style>
+        body{
+            background-image: linear-gradient(80deg, lightgreen, lightblue, lightyellow);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 3vw;
+            color: black;
+        }
+        h1{
+            font-weight: bold;
+            font-size: 3vw;
+            color: green;
+            text-transform: uppercase;
+        } 
+        p{
+            font-size: 2vh;
+            color: black;
+        }
+        .parag{
+            font-size: 2vw;
+            color: white;
+        }
+        label{
+            font-weight: bold;
+            font-size: 2vw;
+            color: green;
+        }
+        #res{
+            width: 930px;
+            height: 200px;
+            color: black;
+            background-color: lightgreen;
+            border: 2px solid black;
+            border-radius: 3px;
+        }
+        #hour{
+            width: 400px;
+            height: 100px;
+            color: black;
+            background-color: lightgreen;
+            border: 2px solid black;
+            border-radius: 3px;
+            text-align: justify;
+            padding-bottom: 5px;
+        }
+        </style>
+</head>
+<body>
+    <h1>Sistema de verificação de dias</h1>
+    <p class="parag">Tenha acesso ao seu dia da semana logo abaixo!</p>
+    <div id="res"></div>
+    <script>
+        var agora = new Date()
+        var diaSem = agora.getDay()
+        var res = document.querySelector('div#res')
+        diaSem = Number(window.prompt('De 1 a 7, qual dia é hoje?'))
+        switch(diaSem){
+            case 1:
+                res.innerHTML = `<p>O dia de hoje é: <strong>Domingo</strong>!<p>`
+                break
+            case 2:
+                res.innerHTML = `<p>O dia de hoje é: <strong>Segunda-Feira</strong>!<p>`
+                break
+            case 3:
+                res.innerHTML = `<p>O dia de hoje é: <strong>Terça-Feira</strong>!<p>`
+                break
+            case 4:
+                res.innerHTML = `<p>O dia de hoje é: <strong>Quarta-Feira</strong>!<p>`
+                break
+            case 5:
+                res.innerHTML = `<p>O dia de hoje é: <strong>Quinta-Feira</strong>!<p>`
+                break
+            case 6:
+                res.innerHTML = `<p>O dia de hoje é: <strong>Sexta-Feira</strong>!<p>`
+                break
+            case 7:
+                res.innerHTML = `<p>O dia de hoje é: <strong>Sábado</strong>!<p>`
+                break
+            default:
+                res.innerHTML = `<p><strong>[ERRO]</strong> Número não identificado! Escolha entre um dos números pedidos!</p>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição!</title>
+    <style>
+        body{
+            background-image: linear-gradient(80deg, lightgreen, lightblue, lightyellow);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 3vw;
+            color: black;
+        }
+        h1{
+            font-weight: bold;
+            font-size: 3vw;
+            color: green;
+            text-transform: uppercase;
+        } 
+        p{
+            font-size: 2vh;
+            color: black;
+        }
+        .parag{
+            font-size: 2vw;
+            color: white;
+        }
+        label{
+            font-weight: bold;
+            font-size: 2vw;
+            color: green;
+        }
+        #res{
+            width: 930px;
+            height: 200px;
+            color: black;
+            background-color: lightgreen;
+            border: 2px solid black;
+            border-radius: 3px;
+        }
+        #hour{
+            width: 400px;
+            height: 100px;
+            color: black;
+            background-color: lightgreen;
+            border: 2px solid black;
+            border-radius: 3px;
+            text-align: justify;
+            padding-bottom: 5px;
+        }
+        </style>
+</head>
+<body>
+    <h1>Sistema de verificação de multas</h1>
+    <p class="parag">Tenha acesso à sua situação abaixo!</p>
+    <label for="txtvel">Velocidade do Carro:</label> <input type="number" id="txtvel">
+    <label for="button">Acesse o resultado</label> <input type="button" value="Verificar" id="botao" onclick="calcular()">
+    <div id="res"></div>
+    <div id="hour"></div>
+    <script>
+        function calcular(){
+            var txtv = document.querySelector('input#txtvel')
+            var botao = document.querySelector('input#botao')
+            var res = document.querySelector('div#res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>Sua velocidade atual é de ${vel} Km/h!</p>`
+            if(vel > 90){
+                res.innerHTML += `<p>Sua velocidade de ${vel} Km/h está incompatível com o limite máximo da pista, você está <strong>MULTADO</strong> por excesso de velocidade!</p>`
+            } else if(vel > 45){
+                res.innerHTML += `<p>Sua velocidade de ${vel} Km/h é compatível com o limite da pista.</p>`
+            } else if(vel < 45){
+                res.innerHTML += `<p>Sua velocidade de ${vel} Km/h é incompatível com o limite mínimo da pista, você está <strong>MULTADO</strong> por falta de velocidade!</p>`
+            }
+            res.innerHTML += `<p>Dirija com <u>cinto de segurança</u> e com cuidado!</p>`
+        } 
+        var agora = new Date()
+        var hora = agora.getHours()
+        var min = agora.getMinutes()
+        var sec = agora.getSeconds()
+        var data = agora.getDate()
+        var mes = agora.getMonth()
+        var ano = agora.getFullYear()
+        var horanow = document.querySelector('div#hour')
+        hour.innerHTML = `<p>Hoje é dia ${data}/${mes}/${ano}.</p> <p>De acordo com o horário de Brasília, o horário atual é ${hora};${min};${sec}!</p>`
+    </script>
+</body>
+</html>
