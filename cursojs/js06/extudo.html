@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Condição!</title>
+    <link rel="script" href="script.js">
     <style>
         body{
             background-image: linear-gradient(80deg, #49B0FA, #94D0FB, #3A8CC7);
@@ -12,52 +13,83 @@
             background-repeat: no-repeat;
             background-size: cover;
             font-size: 3vw;
-            border: 4px solid #3A8CC7;
             width: 60vw;
-            height: 100vh;
+            min-height: 100vh;
             padding: 5px;
             margin: auto;
             color: black;
         }
         header{
-            border: 3px solid white;
             border-radius: 3px;
         }
-        h1{
+        #thead{
             font-weight: bold;
             font-size: 3vw;
-            color: green;
+            text-align: center;
+            color: #23567A;
             text-transform: uppercase;
         } 
-        p{
-            font-size: 2vh;
-            color: black;
+        #phead{
+            font-size: 2vw;
+            color: white;
+            text-align: center;
         }
         main{
             width: 99,5%;
             height: 70vh;
-            border: 3px solid black;
-            border-radius: 3px;
+            border-radius: 5px;
+        }
+        section{
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 10px;
+            width: 50%;
+            height: 97%;
+            margin: auto;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+        }
+        #msg{
+            font-size: 2vw;
+            text-align: center;
+            width: 90%;
+            height: 10%;
+        }
+        #logo{
+            text-align: center;
+            position: absolute;
+            top: 65%;
+            left: 42%;
+
         }
         footer{
-            width: 99,5%;
-            height: 10vh;
-            border: 3px solid green;
+            background-color: #23567A;
+            color: white;
+            width: 52%;
+            height: 6vh;
+            margin:auto;
             border-radius: 3px;
+            text-align: center;
+            font-size: 2vw;
         }
         
         </style>
 </head>
-<body>
+<body onload="carregar()">
     <header>
-        <h1>Sistema de verificação de dias</h1>
-        <p>Tenha acesso ao seu dia da semana logo abaixo!</p>
+        <h1 id="thead">Sistema dos Dias</h1>
+        <p id="phead">Tenha uma ótima (var)!</p>
     </header>
     <main>
-        <div></div>
-        <script></script>
+        <section id="sect">
+            <div id="msg">
+            </div>
+            <div id="logo">
+                <img id="imagem" src="imagem/day1.png" alt="Foto da Manhã">
+            </div>
+        </section>
     </main>
     <footer>
-
+        <div>&copy; Criado por Isaac Marques para portfólio.</div>
     </footer>
+    <script src="script.js"></script>
 </html>
