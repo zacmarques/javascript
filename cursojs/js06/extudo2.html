@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Geral</title>
+    <link rel="script" href="script.js">
+    <style>
+        body{
+            background-image: linear-gradient(80deg, #49B0FA, #94D0FB, #3A8CC7);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 3vw;
+            width: 60vw;
+            min-height: 100vh;
+            padding: 5px;
+            margin: auto;
+            color: black;
+        }
+        header{
+            border-radius: 3px;
+        }
+        #thead{
+            font-weight: bold;
+            font-size: 3vw;
+            text-align: center;
+            color: #23567A;
+            text-transform: uppercase;
+        } 
+        #phead{
+            font-size: 2vw;
+            color: white;
+            text-align: center;
+        }
+        main{
+            width: 99,5%;
+            height: 70vh;
+            border-radius: 5px;
+        }
+        div{
+            text-align: left;
+            padding: 20px;
+            align-items: center;
+            font-size: 1.5vw;
+        }
+        section{
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 10px;
+            width: 50%;
+            height: 97%;
+            margin: auto;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+        }
+        footer{
+            background-color: #23567a00;
+            color: white;
+            width: 52%;
+            height: 6vh;
+            margin:auto;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 1.5vw;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <h1 id="thead">Verificador de Idade</h1>
+        <p id="phead">Tenha acesso à sua situação abaixo!</p>
+    </header>
+    <main>
+        <section id="sect">
+            <div>
+                <p><label for="txtano">1. Ano de Nascimento:</label> 
+                    <input type="number" name="txtano" id="txtano" min="1920">
+                </p>
+                <p>2. Sexo: 
+                    <input type="radio" name="radsex" id="masc" checked>
+                    <label for="masc">Masculino</label>
+                    <input type="radio" name="radsex" id="fem">
+                    <label for="fem">Feminino</label>
+                </p>
+                <p>3. Descubra clicando:
+                    <input type="button" value="Verificar" id="botao" onclick="calcular()">  
+                </p>
+            </div>
+            <div id="res">
+                Preencha os dados acima para ver o resultado!
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>&copy; Criado por Isaac Marques para portfólio.</div>
+    </footer>
+    <script src="script2.js"></script>
+</html>
