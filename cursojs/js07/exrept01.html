@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercícios sobre Repetição</title>
+    <title>Super Contador!</title>
+    <link rel="script" href="script.js">
     <style>
         body{
             background-image: linear-gradient(80deg, #49B0FA, #94D0FB, #3A8CC7);
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
+            font-size: 3vw;
             width: 60vw;
             min-height: 100vh;
             padding: 5px;
@@ -18,21 +20,99 @@
             color: black;
         }
         header{
+            z-index: 10;
+            background-color: white;
+            position: relative;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            margin-right: -20px;
+            margin-left: -20px;
+            border: 3px solid #2B6894;
+
+        }
+        #thead{
+            font-weight: bold;
+            font-size: 2.5vw;
             text-align: center;
-            font-style: normal;
-            color: rgba(255, 255, 255, 0.527);
+            color: #23567A;
+            text-transform: uppercase;
+        } 
+        p.form{
+            font-size: 2.5vw;
+            color: white;
+            text-align: left;
+        }
+        main{
+            z-index: -15;
+            margin-top: -15px;
+            background-color: #3882b8;
+            width: 99,5%;
+            min-height: 70vh;
+            border-radius: 5px;
+            padding: 50px;
+        }
+        input{
+            width: 20vw;
+            height: 3vh;
+        }
+        .bot{
+            position: absolute;
+            top: 45vh;
+            left: 60vw;
+            width: 10vw;
+            height: 5vh;
+        }
+        #res{
+            text-transform: none;
+            font-size: 1.5vw;
+            color: white;
+            text-align: left;
+            width: 54vw;
+            min-height: 30vh;
+        }
+        .h1sect{
+            text-transform: uppercase;
+            font-size: 2.5vw;
+            color: white;
+            text-align: center;
+
+        }
+        p.res{
+            text-transform: none;
+            font-size: 2vw;
+            color: black;
+            text-align: left;
+        }
+        footer{
+            color: white;
+            width: 52%;
+            height: 6vh;
+            margin:auto;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 1.5vw;
+            padding: 15px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Criando Repetições</h1>
+        <h1 id="thead">Repetições!</h1>
     </header>
     <main>
-        <h1>Repetições/Laços</h1>
+        <section>
+            <h1 class="h1sect">Contando com Repetições.</h1>
+            <div id="dados">
+                <p class=form><label for="txtini">Início: </label><input type="number" name="inicio" id="txtini"></p>
+                <p class="form"><label for="txtfim">Final: </label> <input type="number" name="final" id="txtfim"></p>
+                <p class="form"><label for="txtpas">Passo: </label><input type="number" name="passo" id="txtpas"></p>
+                <p><input class="bot" type="button" value="Contar" onclick="contar()"></p>
+            </div>
+            <div id="res">Contando:</div>
+        </section>
     </main>
     <footer>
-
+        <div>&copy; Criado por Isaac Marques para portfólio.</div>
     </footer>
     <script src="script2.js"></script>
 </body>
