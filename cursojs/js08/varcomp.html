@@ -45,6 +45,74 @@
             border-radius: 5px;
             padding: 50px;
         }
+        section{
+            background-color: white;
+            border-radius: 10px;
+            border: 2px solid white;
+            padding: 5px;
+        }
+        #a1{
+            background-image: #1b93bea1;
+            display: inline-block;
+            border: 3px solid black;
+            border-radius: 5px;
+            width: 99%;
+        }
+        #print{
+            position: relative;
+            background-image: url(print.png);
+            background-position: cover;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            min-width: 30vw;
+            height: 50vh;
+        }
+        h1{
+            text-align: center;
+            font-size: 2.5vw;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: lighter;
+        }
+        p{
+            text-align: justify;
+            text-decoration: none;
+            font-size: 1.5vw;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: lighter;
+        }
+        #a2{
+            background-image: #1b93bea1;
+            display: inline-block;
+            border-radius: 5px;
+            width: 99%;
+        }
+        ol{
+            margin-left: 20px;
+            padding-left: -20px;
+            text-align: justify;
+        }
+        li{
+            text-align: justify;
+            padding-left: 1px;
+        }
+        #a3{
+            background-image: #1b93bea1;
+            display: inline-block;
+            border: 3px solid black;
+            border-radius: 5px;
+            width: 50%;
+            margin-left:25%;
+            
+        }
+        #print2{
+            position: relative;
+            background-image: url(print2.png);
+            background-position: cover;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            min-width: 10vw;
+            height: 30vh;
+        }
         footer{
             color: white;
             width: 52%;
@@ -61,10 +129,39 @@
         <h1 id="thead">Variáveis Compostas</h1>
     </header>
     <main>
+        <section>
+            <h1>Sobre variáveis compostas/Arrays</h1>
+            <aside id="a1">
+                <div id="print"></div>
+            </aside>
+            <aside id="a2">
+                <p>Variáveis compostas servem para você diminuir o tamanho do código e conseguir fazer vários elementos dentro de uma única variável, elementos esses que são compostos por um valor e uma chave de identificação.</p>
+                <ol type="1">
+                    <li>
+                        <p>Essa variável também pode ser chamada de Array(inglês) e de Vetor(br), significa apenas que um vetor é composto por elementos.</p>
+                    </li>
+                    <li>
+                        <p>Os elementos são pares que agrupam o espaço da memória, o valor colocado dentro dele e o índice.</p>
+                    </li>
+                    <li>
+                        <p>Já o índice é conhecido por chave ou key, eles indicam a numeração e sempre começam no 0(NA PROGRAMAÇÃO GERALMENTE COMEÇA SEMPRE NO 0) e são organizados em ordem(0, 1, 2 e etc.).</p>
+                    </li>
+                    <li>
+                        <p>Cada elemento tem seu valor e ele é basicamente o conteúdo do elemento.</p>
+                    </li>
+                </ol>
+            </aside>
+            <aside id="a3">
+                <div id="print2">
+
+                </div>
+            </aside>
+            <p>Assim, temos alguns exemplos na enumerados na imagem. Com isso, é possível ver que algumas possibilidades que as Arrays possibilitam, assim como uma forma de mostrar o valor e sua posição em ordem, uma forma simplificada de fazer isso e como encontrar uma key específica atavés da busca pelo elemento.</p>
+        </section>
     </main>
     <footer>
         <div>&copy; Criado por Isaac Marques para portfólio.</div>
     </footer>
-    <script src="script2.js"></script>
+    <script src="script1.js"></script>
 </body>
 </html>
