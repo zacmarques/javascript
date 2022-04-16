@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <link rel="script" href="script.js">
+    <style>
+        body{
+            background-image: linear-gradient(80deg, #49B0FA, #94D0FB, #3A8CC7);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 3vw;
+            width: 60vw;
+            min-height: 100vh;
+            padding: 5px;
+            margin: auto;
+            color: black;
+        }
+        header{
+            z-index: 10;
+            background-color: white;
+            position: relative;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            margin-right: -20px;
+            margin-left: -20px;
+            border: 3px solid #2B6894;
+        }
+        #thead{
+            font-weight: bold;
+            font-size: 2.5vw;
+            text-align: center;
+            color: #23567A;
+            text-transform: uppercase;
+        }
+        main{
+            z-index: -15;
+            margin-top: -15px;
+            background-color: #3882b8;
+            width: 99,5%;
+            min-height: 70vh;
+            border-radius: 5px;
+            padding: 50px;
+        }
+        section{
+            background-color: white;
+            border-radius: 10px;
+            border: 2px solid white;
+            padding: 5px;
+        }
+        #a1{
+            background-image: #1b93bea1;
+            display: inline-block;
+            border: 3px solid black;
+            border-radius: 5px;
+            width: 50%;
+            margin-left: 25%;
+        }
+        #print{
+            position: relative;
+            background-image: url(print3.png);
+            background-position: cover;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            min-width: 10vw;
+            height: 50vh;
+        }
+        #a2{
+            background-image: #1b93bea1;
+            display: inline-block;
+            border: 3px solid white;
+            border-radius: 5px;
+            min-width: 50%;
+            width: 98%;
+            max-height: 100%;
+
+        }
+        #print2{
+            position: relative;
+            background-image: url(print4.png);
+            background-position: center;
+            background-size: 50% 100%;
+            background-repeat: no-repeat;
+            border-radius: 15px;
+            border: 2px solid white;
+            min-width: 10vw;
+            width: 100%;
+            height: 55vh;
+        }
+        #a3{
+            background-image: #1b93bea1;
+            display: inline-block;
+            border: 3px solid white;
+            border-radius: 5px;
+            width: 99%;
+        }
+        #print3{
+            position: relative;
+            background-image: url(print5.png);
+            background-position: center;
+            background-size: 55% 100%;
+            background-repeat: no-repeat;
+            min-width: 10vw;
+            width: 100%;
+            height: 30vh;
+        }
+        h1{
+            text-align: center;
+            font-size: 2.5vw;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: lighter;
+        }
+        p{
+            text-align: justify;
+            text-decoration: none;
+            font-size: 1.5vw;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: lighter;
+        }
+        footer{
+            color: white;
+            width: 52%;
+            height: 6vh;
+            margin:auto;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 1.5vw;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="thead">Funções!</h1>
+    </header>
+    <main>
+        <section>
+            <h1>Sobre chamadas e funções.</h1>
+            <aside id="a1">
+                <div id="print"></div>
+            </aside>
+            <p>A respeito das funções, podemos dizer que toda função tem os seguintes fatores: uma chamada, um conjunto de parâmetros, uma ação e um retorno. Nem sempre a função vai ter um conjunto de parâmetros ou retorno.</p>
+            <p>Também podemos dizer, tecnicamente, que uma função é: são <u>ações</u> executadas assim que são <strong>chamadas</strong> ou em decorrência de algum <i><strong>evento</strong></i>. </p>
+            <p>Uma <u>função</u> pode receber <i><strong>parâmetros</strong></i> e retornar um <i><strong>resultado</strong></i></p>
+            <h1>Sequência de exemplos práticos.</h1>
+            <aside id="a2">
+                <div id="print2"></div>
+            </aside>
+            <p>Durante os exemplos, temos alguns fatores relevantes a serem levantados.</p>
+            <p>O primeiro exemplo é uma <strong>function</strong> com a capacidade de retornar se um número é par ou impar.</p>
+            <p>O segundo exemplo é uma <strong>function simples</strong> com o intuito de <strong>retornar</strong> a soma entre dois números, atentando-se que, caso não sejam especificados quais são os valores de <strong>n1</strong> e/ou <strong>n2</strong>, ele entenderá como 0</p>
+            <p>O terceiro exemplo cria uma <strong>variável</strong> que recebe uma <strong>function</strong> X e pede para a <strong>function</strong> retornar com o valor de x*2, nisso a <strong>function</strong> retorna o valor de x vezes 2, levando em consideração que x receba 5. </p>
+            <aside id="a3">
+                <div id="print3"></div>
+            </aside>
+            <p>O quarto exemplo cria uma <strong>function</strong> que quer me retornar o fatorial de algum número, no nosso exemplo é o número 5, então eu crio um <strong>for de repetição</strong> para achar o fatorial e depois indico o número 5 no <strong>log</strong>, encerrando a aplicação com ele me retornando o fatorial de 5 como esperado.</p>
+            <p>O quinto e último exemplo trata-se de uma forma <strong>recursiva</strong> de criar o exemplo 4 fazendo uma <strong>function</strong> que chama outra <strong>function</strong> e/ou ela mesma, como é o caso, e faz o fatorial de uma forma diferente do exemplo 4, porém com o mesmo resultado.</p>
+        </section>
+    </main>
+    <footer>
+        <div>&copy; Criado por Isaac Marques para portfólio.</div>
+    </footer>
+    <script src="script2.js"></script>
+</body>
+</html>
