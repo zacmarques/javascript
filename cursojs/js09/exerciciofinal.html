@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador</title>
+    <link rel="script" href="script.js">
+    <style>
+        body{
+            background-image: linear-gradient(80deg, #49B0FA, #94D0FB, #3A8CC7);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 3vw;
+            width: 60vw;
+            min-height: 100vh;
+            padding: 5px;
+            margin: auto;
+            color: black;
+        }
+        header{
+            z-index: 10;
+            background-color: white;
+            position: relative;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            margin-right: -20px;
+            margin-left: -20px;
+            border: 3px solid #2B6894;
+        }
+        #thead{
+            font-weight: bold;
+            font-size: 2.5vw;
+            text-align: center;
+            color: #23567A;
+            text-transform: uppercase;
+        }
+        main{
+            z-index: -15;
+            margin-top: -15px;
+            background-color: #3882b8;
+            width: 99,5%;
+            min-height: 70vh;
+            border-radius: 5px;
+            padding: 50px;
+        }
+        section{
+            background-color: white;
+            height: 50vh;
+            border-radius: 15px;
+            border: 2px solid white;
+            padding: 10px;
+        }
+        select{
+            width: 18vw;
+        }
+        #res{
+            border: 2px solid black;
+            border-radius: 15px ;
+            height: 18vh;
+            font-size: 1.5vh;
+            padding: 5px;
+        }
+        footer{
+            color: white;
+            width: 60%;
+            height: 6vh;
+            margin:auto;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 2vw;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="thead">Analisando Números!</h1>
+    </header>
+    <main>
+        <section>
+            <div id="num">
+                <label for="txtn">Número(entre 1 e 10000): </label><input type="number" name="fnum" id="txtn">
+                <input type="button" value="Adicionar" onclick="adicionar()">
+                <p><select name="flista" id="flista" size="6"></select></p>
+                <p><input type="button" value="Finalizar" onclick="finalizar()"> </p> 
+            </div>
+            <div id="res">
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>&copy; Criado por Isaac Marques para portfólio.</div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
